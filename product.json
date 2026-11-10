@@ -1,0 +1,19 @@
+{
+  "id": 1,
+  "name": "Kaos Kaki Premium Combed",
+  "price": 45000,
+  "originalPrice": 60000,
+  "image": "Kaos Kaki_Hitam.webp",
+  "imageAlt": "Kaos Kaki Premium Combed warna Hitam",
+  "description": "Kaos Kaki Premium Combed dibuat dari katun combed 24s yang lembut, menyerap keringat, dan tidak mudah melar. Cocok untuk aktivitas harian, kerja, maupun olahraga ringan.",
+  "features": [
+    "Bahan: 80% katun combed, 15% polyester, 5% spandex",
+    "Karet pergelangan elastis, tidak menekan",
+    "Jahitan ujung halus (seamless toe)"
+  ],
+  "stock": {
+    "Hitam": { "S": 20, "M": 30, "L": 50 },
+    "Abu-abu": { "S": 10, "M": 20, "L": 100 }
+  }
+}
+

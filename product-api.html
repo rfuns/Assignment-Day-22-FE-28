@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SockStore - Product (API)</title>
+    <link rel="icon" href="LogoSockStore.png" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <script src="api.js" defer></script>
+  </head>
+  <body>
+    <header class="header0">
+      <div class="header1">
+        <img src="LogoSockStore.png" alt="logo" />
+        <nav class="Atas1">
+          <a href="#">Beranda</a>
+          <span class="sep">/</span>
+          <a href="#">Kaos Kaki</a>
+          <span class="sep">/</span>
+          <span aria-current="page">Kaos Kaki Premium Combed</span>
+        </nav>
+        <p class="page-switch">Halaman API-driven | <a href="index.html">Lihat halaman hardcoded</a></p>
+        <p class="cart-badge">Keranjang: <strong id="cartCount">0</strong> item</p>
+      </div>
+    </header>
+
+    <main class="container">
+      <p id="loading" class="status-box" role="status">Memuat data product...</p>
+      <div id="error" class="status-box is-error" role="alert" hidden>
+        <p id="errorText"></p>
+        <button id="retryBtn" class="btn btn-buy" type="button">Coba lagi</button>
+      </div>
+      <p id="localNote" class="local-note" hidden>Mode lokal: data hardcoded dipakai karena halaman dibuka langsung dari file. Jalankan Server-aktifkan.bat untuk memuat dari API.</p>
+      <div id="productContent" hidden>
+      <section class="product-top">
+        <div class="gallery">
+          <figure class="gallery-main">
+            <img
+              id="mainImage"
+              src="Kaos Kaki_Hitam.webp"
+              alt="Kaos Kaki Premium Combed warna Hitam"
+            />
+            <figcaption class="gallery-caption">
+              Kaos Kaki Premium Combed - Hitam
+            </figcaption>
+            <button class="zoom-btn" type="button" aria-label="Perbesar gambar">
+              ⤢
+            </button>
+          </figure>
+
+          <div class="ListGambars" role="list">
+            <button
+              class="ListGambar is-active"
+              type="button"
+              data-color="Hitam"
+              data-full="Kaos Kaki_Hitam.webp"
+              data-caption="Kaos Kaki Premium Combed - Hitam"
+              aria-label="Lihat Kaos Kaki Hitam"
+            >
+              <img
+                src="Kaos Kaki_Hitam.webp"
+                alt="ListGambar Kaos Kaki Hitam"
+              />
+            </button>
+            <button
+              class="ListGambar"
+              type="button"
+              data-color="Abu-abu"
+              data-full="Kaos Kaki_AbuAbu.webp"
+              data-caption="Kaos Kaki Premium Combed - Abu-abu"
+              aria-label="Lihat Kaos Kaki Abu-abu"
+            >
+              <img
+                src="Kaos Kaki_AbuAbu.webp"
+                alt="ListGambar Kaos Kaki Abu-abu"
+              />
+            </button>
+            <button
+              class="ListGambar"
+              type="button"
+              data-color="Hitam"
+              data-full="Detail spec kaos kaki Hitam.webp"
+              data-caption="Detail spesifikasi - Hitam"
+              aria-label="Lihat detail spesifikasi Hitam"
+            >
+              <img
+                src="Detail spec kaos kaki Hitam.webp"
+                alt="ListGambar detail spesifikasi Hitam"
+              />
+            </button>
+            <button
+              class="ListGambar"
+              type="button"
+              data-color="Abu-abu"
+              data-full="Detail spec kaos kaki AbuAbu.webp"
+              data-caption="Detail spesifikasi - Abu-abu"
+              aria-label="Lihat detail spesifikasi Abu-abu"
+            >
+              <img
+                src="Detail spec kaos kaki AbuAbu.webp"
+                alt="ListGambar detail spesifikasi Abu-abu"
+              />
+            </button>
+          </div>
+        </div>
+
+        <div class="infoproduct">
+          <div class="rating" aria-label="Rating 4.7 dari 5, 3 ulasan">
+            <span class="stars" aria-hidden="true">★★★★★</span>
+            <span class="ratinginvalue">4.7</span>
+            <span class="ratingincount">(3 ulasan)</span>
+          </div>
+
+          <div class="price">
+            <span class="pricenow">Rp45.000</span>
+            <span class="priceold">Rp60.000</span>
+            <span class="badgediscount">-25%</span>
+          </div>
+
+          <p class="KetersediaanUnit">
+            Pilih ukuran untuk melihat ketersediaan.
+          </p>
+
+          <div class="variant">
+            <p class="variant-label">Warna: <strong>Hitam</strong></p>
+            <div class="color-options" role="group" aria-label="Pilihan warna">
+              <button
+                class="color-swatch is-selected"
+                style="--c: #2b2f38"
+                type="button"
+                aria-label="Warna Hitam"
+              ></button>
+              <button
+                class="color-swatch"
+                style="--c: #9ba1a9"
+                type="button"
+                aria-label="Warna Abu-abu"
+              ></button>
+            </div>
+          </div>
+
+          <div class="variant">
+            <p class="variant-label">Ukuran: <span class="muted">—</span></p>
+            <div class="sizeoptions" role="group" aria-label="Pilihan ukuran">
+              <button class="sizeoption" type="button">S</button>
+              <button class="sizeoption" type="button">M</button>
+              <button class="sizeoption" type="button">L</button>
+            </div>
+            <a href="#panduan" class="sizeguidelink">Panduan ukuran</a>
+          </div>
+
+          <div class="variant">
+            <p class="variant-label">Jumlah</p>
+            <div class="qty">
+              <button class="qty-btn" type="button" aria-label="Kurangi jumlah">
+                −
+              </button>
+              <input
+                class="qty-input"
+                type="text"
+                value="1"
+                inputmode="numeric"
+                aria-label="Jumlah produk"
+              />
+              <button class="qty-btn" type="button" aria-label="Tambah jumlah">
+                +
+              </button>
+            </div>
+          </div>
+
+          <p class="subtotal">
+            Subtotal: <strong id="subtotal">Rp45.000</strong>
+            <span id="subtotalDetail" class="muted-text"></span>
+          </p>
+          <p id="message" class="message" role="status" aria-live="polite"></p>
+
+          <div class="actions">
+            <button class="btn btn-cart" type="button">
+              Tambah ke Keranjang
+            </button>
+            <button class="btn btn-buy" type="button">Beli Sekarang</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="product-tabs" id="panduan">
+        <div class="tab-bar" role="tablist">
+          <button
+            class="tab is-active"
+            type="button"
+            role="tab"
+            aria-selected="true"
+          >
+            Deskripsi
+          </button>
+          <button class="tab" type="button" role="tab" aria-selected="false">
+            Panduan Ukuran
+          </button>
+          <button class="tab" type="button" role="tab" aria-selected="false">
+            Perawatan
+          </button>
+        </div>
+
+        <div class="tab-content" role="tabpanel">
+          <p id="description"></p>
+          <ul id="features"></ul>
+        </div>
+      </section>
+    </div>
+    </main>
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Pratinjau gambar" hidden>
+      <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
+      <div class="lightbox-body">
+        <button class="lightbox-close" id="lightboxClose" type="button" aria-label="Tutup">&times;</button>
+        <img id="lightboxImage" src="" alt="" />
+      </div>
+    </div>
+  </body>
+</html>
+
+
+
+
+
