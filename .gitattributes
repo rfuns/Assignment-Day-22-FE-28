@@ -1,0 +1,5 @@
+# Seragamkan akhir baris agar tidak muncul tanda "M" palsu di Windows
+* text=auto eol=lf
+*.bat text eol=crlf
+*.webp binary
+*.png binary
