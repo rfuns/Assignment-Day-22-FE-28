@@ -16,8 +16,8 @@ let isLoading = false;
 // lewat file:// karena browser memblokir fetch pada mode itu.
 const FALLBACK_PRODUCT = {
   name: "Kaos Kaki Premium Combed",
-  price: 45000,
-  originalPrice: 60000,
+  price: 52500,
+  originalPrice: 70000,
   image: "Kaos Kaki_Hitam.webp",
   imageAlt: "Kaos Kaki Premium Combed warna Hitam",
   description:
